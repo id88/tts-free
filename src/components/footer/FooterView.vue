@@ -18,8 +18,16 @@ import { Download } from "@element-plus/icons-vue";
 <style scoped>
 .footer {
     background-color: yellow;
+    /* width: 750px; */
+    width: 80%;
+
     /* 自动调整高度，和子元素高度保持一致 */
-    height: auto !important;
+    /* height: auto !important; */
+    
+    /* 绝对定位 */
+    /* position: absolute;  */
+    /* 将元素定位在底部 */
+    /* bottom: 0;  */
 }
 .play-bar {
     width: 100%;
@@ -29,7 +37,7 @@ import { Download } from "@element-plus/icons-vue";
     justify-content: center;
     /* 子元素在垂直方向上居中对齐 */
     align-items: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .paly-bar-options {
     width: 70px;
@@ -41,7 +49,6 @@ import { Download } from "@element-plus/icons-vue";
 audio{
     /* 宽度是父容器的100% */
     width: 100%;
-    /* display: block; */
     background-color: red;
     height: 35px;
 }
@@ -75,6 +82,15 @@ display: inline-flex;：该值将元素显示为内联弹性盒子。类似于 d
 
 display: none;：该值将元素隐藏，不会在页面中显示，并且不占据空间。相当于元素不存在于文档中。
 
+
+
+
+position 属性有以下几种值可供设置：
+    static（默认值）：元素处于正常的文档流中，根据正常的布局规则进行定位。
+    relative：相对定位。元素相对于其原始位置进行定位，仍然占据文档流中的空间。
+    absolute：绝对定位。元素脱离文档流，并相对于最近的已定位父元素或 <html> 元素进行定位。
+    fixed：固定定位。元素相对于浏览器窗口进行定位，即使页面滚动，元素的位置也固定不变。
+    sticky：粘性定位。元素在跨越特定阈值前是相对定位的，之后变为固定定位，即在滚动时保持元素在指定范围内可见。
 
 */
 

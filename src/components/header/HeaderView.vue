@@ -91,7 +91,7 @@ const winStyle = ref(!config.value.titleStyle);
 
 .win-style {
     /* 设置主轴方向为逆向排列 */
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
 }
 
 </style>

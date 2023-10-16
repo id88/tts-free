@@ -47,8 +47,8 @@ async function createWindow() {
         minWidth: 900,
         minHeight: 650,
         title: 'Main window',
-        frame: false,
-        icon: join(process.env.VITE_PUBLIC, 'favicon.ico'),
+        // frame: false,
+        icon: join(process.env.VITE_PUBLIC, 'tts-free.png'),
         webPreferences: {
             preload,
             // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
@@ -59,6 +59,8 @@ async function createWindow() {
             // webSecurity: false, //禁用 Electron 中的 Web 安全策略，从而解决 "Refused to frame" 的错误。
         },
     })
+    // 隐藏窗口菜单栏
+    win.setMenuBarVisibility(false);
 
     if (process.env.VITE_DEV_SERVER_URL) { // electron-vite-vue#298
         win.loadURL(url)
