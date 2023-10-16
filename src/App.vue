@@ -13,10 +13,6 @@ import MainView from "./components/main/MainView.vue";
 </template>
 
 <style>
-*{  
-    /* 避免边框改变元素的宽度和高度 */
-    box-sizing: border-box !important;
-}
 body{
     margin: 0;
 }
@@ -30,7 +26,7 @@ body{
     /* background-color: aquamarine; */
     width: auto !important;
     /* border-radius: 15px; */
-    border-top: 1px solid #dcdfe6;;
+    border-top: 1px solid #dcdfe6;
 }
 .el-main{
     /* background-color: gray; */

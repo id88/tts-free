@@ -17,9 +17,14 @@ import { Download } from "@element-plus/icons-vue";
 
 <style scoped>
 .footer {
-    background-color: yellow;
+    /* background-color: yellow; */
     /* width: 750px; */
     width: 80%;
+
+    border-left: 1px solid #dcdfe6;
+    /* border-top: 1px solid #dcdfe6; */
+
+    padding-top: 3px;
 
     /* 自动调整高度，和子元素高度保持一致 */
     /* height: auto !important; */
@@ -30,6 +35,7 @@ import { Download } from "@element-plus/icons-vue";
     /* bottom: 0;  */
 }
 .play-bar {
+    /* background-color: green; */
     width: 100%;
     /* 里面的子元素弹性布局，水平排列 */
     display: flex;
@@ -44,13 +50,19 @@ import { Download } from "@element-plus/icons-vue";
 }
 .paly-bar-process {
     width: 70%;
-    background-color: blue;
+    /* background-color: blue; */
+    /* 里面的子元素弹性布局，水平排列 */
+    display: flex;
+    /* 子元素在水平方向上自动调整对齐方式 */
+    justify-content: center;
+    /* 子元素在垂直方向上居中对齐 */
+    align-items: center;
 }
 audio{
     /* 宽度是父容器的100% */
     width: 100%;
-    background-color: red;
-    height: 35px;
+    /* background-color: red; */
+    height: 30px;
 }
 
 /* 

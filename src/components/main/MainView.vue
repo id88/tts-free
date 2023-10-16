@@ -197,7 +197,7 @@ const openInFolder = (val: any) => {
 .menu{
     background-color: pink;
     border-radius: 3px;
-    border: 1px solid #dcdfe6;
+    border-top: 1px solid #dcdfe6;
 }
 
 .menu .el-menu {
@@ -232,10 +232,12 @@ const openInFolder = (val: any) => {
 }
 
 .el-table{
-    height: calc(100vh - 90px);
-    /* 【bug1】神奇，设置为100% 窗口变化时会出现滚动条，并且会把边上的元素顶开 */
-    width: 99%;
     /* background-color: #ffc; */
+    height: calc(100vh - 90px);
+    /* 【bug1】神奇，设置为100% 窗口变化时会出现滚动条，因为边框线占了面积，并且会把边上的元素顶开 */
+    width: 98%;
+    border-top: 1px solid #dcdfe6;
+    border-left: 1px solid #dcdfe6;
 }
 
 /* 选择所有textarea元素并设置滚动条样式 */
@@ -250,7 +252,7 @@ const openInFolder = (val: any) => {
 
 .table-tool {
     /* background-color: #ffc; */
-    height: 50px;
+    height: 48px;
     /* 里面的子元素弹性布局，水平排列 */
     display: flex;
     /* 弹性项目之间的间距相等，并且弹性容器的两侧都留有相等的空白空间 */
@@ -258,7 +260,7 @@ const openInFolder = (val: any) => {
     /* 子元素在垂直方向上居中对齐 */
     align-items: center;
     border-bottom: 1px solid #dcdfe6;
-
+    border-left: 1px solid #dcdfe6;
 }
 
 .main-doc-page{

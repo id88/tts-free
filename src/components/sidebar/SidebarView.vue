@@ -40,6 +40,12 @@ const menuChange = (index: number) => {
     /* background-color: brown; */
     width: 130px;
 }
+
+:deep(.el-menu){
+    border-right: none;
+    /* border-right: 3px solid red; */
+}
+
 .el-menu-item{
     /* background-color: greenyellow; */
     /* border-top: 1px solid  #dcdfe6; */

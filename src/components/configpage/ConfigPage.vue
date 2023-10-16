@@ -11,7 +11,8 @@
 .config-page{
     background-color: blueviolet;
     height: 300px;
-    position: relative; /* 相对定位 */
+    /* 相对定位 */
+    position: relative; 
 }
 .inner{
     height: 50px;
