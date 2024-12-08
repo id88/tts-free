@@ -1,5 +1,6 @@
 
 ## 2023年10月16日
+- 将 electron 26.4.0 更新到 27.0.2 版本
 
 ## 2023年10月14日
  - 安装 pinia， `npm install pinia`

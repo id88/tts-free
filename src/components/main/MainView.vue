@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import MainOptions from "./MainOptions.vue";
 import ConfigPage from "../configpage/ConfigPage.vue";
+import FooterView from "../footer/FooterView.vue";
 
 import { ref, watch } from "vue";
 import type { UploadInstance, UploadProps, UploadUserFile } from "element-plus";
 import { useTtsStore } from "@/store/firstStore";
 import { storeToRefs } from "pinia";
-import FooterView from "../footer/FooterView.vue";
+
 const { shell } = require("electron");
 var path = require("path");
 const store = useTtsStore();

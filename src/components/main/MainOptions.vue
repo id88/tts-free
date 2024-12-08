@@ -11,6 +11,41 @@
                     :options="oc.languageSelect" @change="languageSelectChange">
                 </el-select-v2>
             </el-form-item>
+            <el-form-item label="语音">
+                <el-select v-model="formConfig.voiceSelect" placeholder="选择语音" @change="voiceSelectChange" >
+                    <el-option v-for="item in voiceSelectList" 
+                        :key="item.ShortName" 
+                        :label="item.DisplayName + '-' + item.LocalName" 
+                        :value="item.ShortName" 
+                    >
+                        <div style="display: flex; justify-content: space-between">
+                            <span style="margin-right: 5px">
+                                {{ item.DisplayName + "-" + item.LocalName }}
+                            </span>
+                            <el-button size="small" 
+                                type="success" 
+                                circle 
+                                @click.stop="audition(item.ShortName)" 
+                            > <el-icon><CaretRight /></el-icon>
+                            </el-button>
+                        </div>
+                    </el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="说话风格">
+                <el-select v-model="formConfig.voiceStyleSelect" placeholder="选择说话风格" :disabled="apiEdge" >
+                    <el-option v-for="item in voiceStyleSelectList"
+                        :key="item"
+                        :label="getStyleDes(item)?.word || item"
+                        :value="item"
+                    >
+                        <div style="display: flex; justify-content: start">
+                        <span style="margin-right: 5px">{{ getStyleDes(item)?.emoji }}</span>
+                        <span>{{ getStyleDes(item)?.word || item }}</span>
+                        </div>
+                    </el-option>
+                </el-select>
+            </el-form-item>
         </el-form>
     </div>
 </template>
@@ -233,12 +268,12 @@ const startBtn = () => {
     /* border-radius: 5px; */
 }
 
-.el-form {
+/* .el-form { */
     /* height: 90%; */
     /* display: flex; */
     /* background-color: gray; */
     /* flex-direction: column; */
-}
+/* } */
 
 .el-form-item {
     width: 270px;
