@@ -14,3 +14,33 @@ git merge origin/<branch-name>
 请注意，在执行 `git merge` 命令之前，确保你的本地分支没有未提交的更改，否则合并可能会失败。如果发生冲突，你需要解决冲突后再进行提交。
 
 你可以通过运行 `git branch -r` 查看所有已获取的远程分支列表。
+
+
+
+## 升级项目的依赖，运行报错
+
+```
+Run npm run build
+
+> tts-free@0.0.1 build
+> vue-tsc --noEmit && vite build && electron-builder
+
+/home/runner/work/tts-free/tts-free/node_modules/vue-tsc/index.js:34
+            throw err;
+            ^
+Search string not found: "/supportedTSExtensions = .*(?=;)/"
+(Use `node --trace-uncaught ...` to show where the exception was thrown)
+
+Node.js v18.20.5
+```
+
+
+**解决方案**
+
+翻了下该 Issue，有人给出了 bug 的来源 [vuejs/language-tools#5018](https://github.com/vuejs/language-tools/issues/5018)，点进去看看，该 Issue 日期也是新鲜的。
+
+Issue 中也有人给出了[解决方法](https://github.com/vuejs/language-tools/issues/5018#issuecomment-2494783497)，自己尝试了是可行的。
+
+- vue-tsc 版本固定成 2.0.29
+- typescript 版本固定成 5.6.2
+
